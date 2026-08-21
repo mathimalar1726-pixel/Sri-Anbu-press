@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ஸ்ரீ அன்பு பிரிண்ட்ஸ் | Sri Anbu Prints</title>
+  <meta name="description" content="ஸ்ரீ அன்பு பிரிண்ட்ஸ் – Printing, Binding, Bill Book & Visiting Card services in Tiruchengode.">
+  <style>
+    :root {
+      --maroon:#7b1020; --deep:#3b0710; --gold:#d6a84f; --cream:#fff8e9;
+      --blue:#172c8a; --text:#2b241f; --white:#fff;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: "Noto Sans Tamil", "Latha", system-ui, sans-serif;
+      color:var(--text); background:#fffaf0; line-height:1.65;
+    }
+    a { color:inherit; text-decoration:none; }
+    .topbar {
+      background:var(--deep); color:#fff; padding:8px 5%; text-align:center;
+      font-size:.9rem; letter-spacing:.2px;
+    }
+    header {
+      position:sticky; top:0; z-index:20; background:rgba(255,250,240,.96);
+      border-bottom:1px solid #ead9b5; backdrop-filter:blur(10px);
+    }
+    nav {
+      max-width:1150px; margin:auto; padding:14px 5%; display:flex;
+      align-items:center; justify-content:space-between; gap:20px;
+    }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; color:var(--maroon); }
+    .brand-mark {
+      width:42px; height:42px; border-radius:50%; display:grid; place-items:center;
+      background:var(--maroon); color:var(--gold); border:2px solid var(--gold); font-weight:900;
+    }
+    .brand small { display:block; font-size:.72rem; color:#6e6255; font-weight:600; }
+    .navlinks { display:flex; gap:22px; font-weight:700; font-size:.95rem; }
+    .navlinks a:hover { color:var(--maroon); }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 19px; border-radius:999px; font-weight:800; border:1px solid transparent;
+    }
+    .btn-primary { background:var(--maroon); color:#fff; box-shadow:0 8px 22px #7b102022; }
+    .btn-outline { border-color:var(--maroon); color:var(--maroon); background:#fff; }
+    .hero {
+      max-width:1150px; margin:30px auto 0; padding:0 5%;
+      display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center;
+    }
+    .hero-copy h1 { font-size:clamp(2.4rem,6vw,5rem); line-height:1.05; color:var(--maroon); }
+    .hero-copy h1 span { color:var(--blue); }
+    .eyebrow {
+      display:inline-block; padding:6px 12px; border-radius:999px; background:#f4e4b7;
+      color:var(--maroon); font-weight:900; margin-bottom:14px;
+    }
+    .hero-copy p { margin:18px 0; font-size:1.08rem; max-width:620px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .poster-wrap {
+      background:#fff; padding:12px; border-radius:28px; border:1px solid #ead9b5;
+      box-shadow:0 18px 50px #4c170d18; transform:rotate(1deg);
+    }
+    .poster-wrap img { display:block; width:100%; border-radius:18px; }
+    .section { max-width:1150px; margin:90px auto 0; padding:0 5%; }
+    .section-head { text-align:center; margin-bottom:32px; }
+    .section-head h2 { color:var(--maroon); font-size:clamp(1.9rem,4vw,3rem); }
+    .section-head p { max-width:700px; margin:8px auto 0; color:#6b6259; }
+    .services { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .service {
+      background:#fff; padding:24px; border-radius:22px; border:1px solid #ead9b5;
+      box-shadow:0 10px 30px #4c170d0b; transition:.25s;
+    }
+    .service:hover { transform:translateY(-6px); box-shadow:0 18px 35px #4c170d16; }
+    .icon {
+      width:54px; height:54px; display:grid; place-items:center; border-radius:16px;
+      background:#f8edcf; color:var(--maroon); font-size:1.6rem; margin-bottom:15px;
+    }
+    .service h3 { margin-bottom:6px; color:var(--deep); }
+    .service p { color:#6b6259; font-size:.93rem; }
+    .gallery {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    }
+    .gallery-card {
+      position:relative; min-height:230px; overflow:hidden; border-radius:22px;
+      background:#eee; border:1px solid #ead9b5;
+    }
+    .gallery-card img {
+      width:100%; height:100%; min-height:230px; object-fit:cover; display:block;
+      transition:.35s;
+    }
+    .gallery-card:hover img { transform:scale(1.05); }
+    .gallery-caption {
+      position:absolute; left:12px; right:12px; bottom:12px; padding:9px 12px;
+      border-radius:12px; background:#3b0710d9; color:#fff; font-weight:800;
+    }
+    .note {
+      margin-top:18px; padding:12px 15px; border-left:4px solid var(--gold);
+      background:#fff4d8; border-radius:10px; color:#675b4e; font-size:.9rem;
+    }
+    .contact {
+      background:linear-gradient(135deg,var(--deep),var(--maroon)); color:#fff;
+      border-radius:30px; padding:38px; display:grid; grid-template-columns:1.2fr .8fr;
+      gap:28px; align-items:center; box-shadow:0 20px 55px #4c170d22;
+    }
+    .contact h2 { font-size:2rem; margin-bottom:10px; }
+    .contact p { color:#f8e9d0; }
+    .contact-list { display:grid; gap:12px; }
+    .contact-item {
+      background:#ffffff12; border:1px solid #ffffff25; border-radius:15px; padding:13px 15px;
+    }
+    .contact-item strong { display:block; color:#f8d889; }
+    footer {
+      margin-top:70px; background:#22040a; color:#dbcbb7; padding:28px 5%;
+      text-align:center; font-size:.9rem;
+    }
+    .floating {
+      position:fixed; right:18px; bottom:18px; z-index:30; background:#159447; color:#fff;
+      padding:13px 18px; border-radius:999px; font-weight:900; box-shadow:0 10px 30px #0003;
+    }
+    @media (max-width:900px) {
+      .navlinks { display:none; }
+      .hero, .contact { grid-template-columns:1fr; }
+      .services { grid-template-columns:repeat(2,1fr); }
+      .gallery { grid-template-columns:repeat(2,1fr); }
+      .poster-wrap { transform:none; }
+    }
+    @media (max-width:560px) {
+      .services, .gallery { grid-template-columns:1fr; }
+      .hero { margin-top:18px; }
+      .section { margin-top:65px; }
+      .contact { padding:25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">📍 அஞ்சநேயர் கோவில் தெரு, திருச்செங்கோடு &nbsp; | &nbsp; 📞 97156 71465</div>
+
+  <header>
+    <nav>
+      <a class="brand" href="#home">
+        <span class="brand-mark">அ</span>
+        <span>ஸ்ரீ அன்பு பிரிண்ட்ஸ்<small>Sri Anbu Prints</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#services">சேவைகள்</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">தொடர்பு</a>
+      </div>
+      <a class="btn btn-primary" href="tel:9715671465">Call Now</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">✨ தரமான அச்சிடுதல் • நம்பிக்கையான சேவை</div>
+        <h1>ஸ்ரீ <span>அன்பு</span> பிரிண்ட்ஸ்</h1>
+        <p><strong>Printing • Binding</strong> மற்றும் தினசரி வணிகத் தேவைகளுக்கான print solutions. Visiting cards முதல் bill books வரை, உங்கள் தேவைக்கு ஏற்ற அச்சிடும் சேவைகள்.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:9715671465">📞 97156 71465</a>
+          <a class="btn btn-outline" href="#services">சேவைகளை பார்க்க</a>
+        </div>
+      </div>
+      <div class="poster-wrap">
+        <img src="assets/poster.jpg" alt="Sri Anbu Prints shop poster">
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head">
+        <h2>எங்கள் சேவைகள்</h2>
+        <p>உங்கள் business, school, office மற்றும் personal printing தேவைகளுக்கு ஒரே இடத்தில் சேவைகள்.</p>
+      </div>
+      <div class="services">
+        <article class="service"><div class="icon">🖨️</div><h3>Printing</h3><p>பல்வேறு print வேலைகளுக்கு neat & professional output.</p></article>
+        <article class="service"><div class="icon">📚</div><h3>Binding</h3><p>Project, records, books மற்றும் documents-க்கு binding சேவை.</p></article>
+        <article class="service"><div class="icon">🧾</div><h3>Bill Books</h3><p>Shop மற்றும் business பயன்பாட்டிற்கான custom bill book printing.</p></article>
+        <article class="service"><div class="icon">💳</div><h3>Visiting Cards</h3><p>Business identity-க்கு professional visiting card printing.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <h2>Print Inspiration</h2>
+        <p>Printing, binding, bill books மற்றும் visiting cards போன்ற வேலைகளுக்கான sample visuals.</p>
+      </div>
+      <div class="gallery">
+        <article class="gallery-card">
+      <img src="https://printexpertkl.my/photo/about/pic8.jpg" alt="Digital Printing" loading="lazy">
+      <div class="gallery-caption">Digital Printing</div>
+    </article>
+<article class="gallery-card">
+      <img src="https://soontornfilm.co.th/wp-content/uploads/2019/12/digital_006.jpg" alt="Business Cards" loading="lazy">
+      <div class="gallery-caption">Business Cards</div>
+    </article>
+<article class="gallery-card">
+      <img src="https://down-my.img.susercontent.com/file/my-11134207-7r98x-llzpv8doaaxf64" alt="Bill Books" loading="lazy">
+      <div class="gallery-caption">Bill Books</div>
+    </article>
+<article class="gallery-card">
+      <img src="https://tradecraft.co.ke/storage/portfolios/March2026/QUhHZZ7GqfNCt99PbE1N.webp" alt="Printing &amp; Binding" loading="lazy">
+      <div class="gallery-caption">Printing &amp; Binding</div>
+    </article>
+<article class="gallery-card">
+      <img src="https://www.fac-one.be/wp-content/uploads/2018/10/IMG-1621-690x388.jpg" alt="Professional Print Setup" loading="lazy">
+      <div class="gallery-caption">Professional Print Setup</div>
+    </article>
+      </div>
+      <div class="note">குறிப்பு: மேலே உள்ள gallery images sample/reference images. உங்கள் shop-ன் உண்மையான வேலைகள் மற்றும் shop photos கிடைத்தால் அவற்றை இங்கே மாற்றலாம்.</div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact">
+        <div>
+          <h2>உங்கள் print வேலைக்கு பேசலாம்! 📞</h2>
+          <p>தேவையை சொல்லுங்கள் — printing, binding, bill book அல்லது visiting card பற்றி quotation கேட்கலாம்.</p>
+        </div>
+        <div class="contact-list">
+          <a class="contact-item" href="tel:9715671465"><strong>Mobile</strong>97156 71465</a>
+          <a class="contact-item" href="tel:04288255465"><strong>Landline</strong>04288 255465</a>
+          <div class="contact-item"><strong>Address</strong>அஞ்சநேயர் கோவில் தெரு, திருச்செங்கோடு.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating" href="https://wa.me/919715671465" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+  <footer>
+    © 2026 Sri Anbu Prints · Tiruchengode · Printing • Binding • Bill Books • Visiting Cards
+  </footer>
+</body>
+</html>
